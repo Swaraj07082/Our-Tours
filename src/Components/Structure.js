@@ -19,17 +19,91 @@ export default function Structure() {
   let russiastring =
     "Russia, the largest country in the world, occupies one-tenth of all the land on Earth. It spans 11 time zones across two continents Europe and Asia and has coasts on three oceans the Atlantic, Pacific, and Arctic. The Russian landscape varies from desert to frozen coastline, tall mountains to giant marshes. Much of Russia is made up of rolling, treeless plains called steppes. Siberia, which occupies three-quarters of Russia, is dominated by sprawling pine forests called taigas. Russia has about 100,000 rivers, including some of the longest and most powerful in the world. It also has many lakes, including Europe's two largest: Ladoga and Onega. Lake Baikal in Siberia contains more water than any other lake on Earth..";
 
+  const [ireland, setireland] = React.useState(irelandstring.slice(0, 350));
+  const [rome, setrome] = React.useState(romestring.slice(0, 350));
+
+  const [paris, setparis] = React.useState(parisstring.slice(0, 350));
+
+  const [Australia, setaustralia] = React.useState(
+    Australiastring.slice(0, 350)
+  );
+
+  const [japan, setjapan] = React.useState(japanstring.slice(0, 350));
+
+  const [russia, setrussia] = React.useState(russiastring.slice(0, 350));
+
+  const [name, setname] = useState("Readmore");
+
+  const [name1, setname1] = useState("Readmore");
+  const [name2, setname2] = useState("Readmore");
+  const [name3, setname3] = useState("Readmore");
+  const [name4, setname4] = useState("Readmore");
+  const [name5, setname5] = useState("Readmore");
+
+  const readmore1 = () => {
+    ireland === irelandstring.slice(0, 350)
+      ? setireland(irelandstring)
+      : setireland(irelandstring.slice(0, 350));
+
+    name === "Readmore" ? setname("Showless") : setname("Readmore");
+  };
+
+  const readmore2 = () => {
+    rome === romestring.slice(0, 350)
+      ? setrome(romestring)
+      : setrome(romestring.slice(0, 350));
+    name1 === "Readmore" ? setname1("Showless") : setname1("Readmore");
+  };
+
+  const readmore3 = () => {
+    paris === parisstring.slice(0, 350)
+      ? setparis(parisstring)
+      : setparis(parisstring.slice(0, 350));
+    name2 === "Readmore" ? setname2("Showless") : setname2("Readmore");
+  };
+
+  const readmore4 = () => {
+    Australia === Australiastring.slice(0, 350)
+      ? setaustralia(Australiastring)
+      : setaustralia(Australiastring.slice(0, 350));
+    name3 === "Readmore" ? setname3("Showless") : setname3("Readmore");
+  };
+
+  const readmore5 = () => {
+    japan === japanstring.slice(0, 350)
+      ? setjapan(japanstring)
+      : setjapan(japanstring.slice(0, 350));
+    name4 === "Readmore" ? setname4("Showless") : setname4("Readmore");
+  };
+  const readmore6 = () => {
+    russia === russiastring.slice(0, 350)
+      ? setrussia(russiastring)
+      : setrussia(russiastring.slice(0, 350));
+    name5 === "Readmore" ? setname5("Showless") : setname5("Readmore");
+  };
+
   return (
     <>
+      <span
+        style={{
+          display: "flex",
+          justifycontent: "center",
+          position: "relative",
+          top: 74,
+          fontsize: "-webkit-xxx-large",
+        }}
+      >
+        Tours
+      </span>
       <div className="container text-center">
         <div className="row">
           <div className="col">
             <div
               className="card"
-              id="new"
               style={{
                 width: 352,
-                height: 620,
+                // height: 62
+                height: "auto",
                 position: "relative",
                 top: 150,
               }}
@@ -45,20 +119,24 @@ export default function Structure() {
                   Best Of Ireland In 14 Days Tour
                 </h5>
                 <p className="card-text">
-                  {irelandstring.slice(0, 430)}
-
+                  {/* {irelandstring.slice(0, 350)}
+                   */}
+                  {ireland}
                   <button
                     type="button"
                     className="btn btn-transparent"
                     style={{
                       position: "relative",
-                      left: 106,
-                      bottom: 8,
+                      // left: 106,
+                      // bottom: 8,
+                      left: "auto",
+                      bottom: "auto",
                       color: "#53cd53",
                       fontWeight: "bold",
                     }}
+                    onClick={readmore1}
                   >
-                    Read More
+                    {name}
                   </button>
                 </p>
               </div>
@@ -72,7 +150,8 @@ export default function Structure() {
               className="card"
               style={{
                 width: 352,
-                height: 620,
+                // height: 620,
+                height: "auto",
                 position: "relative",
                 top: 150,
               }}
@@ -86,19 +165,26 @@ export default function Structure() {
               <div className="card-body">
                 <h5 className="card-title my-4">Best Of Rome In 7 Days Tour</h5>
                 <p className="card-text">
-                  {romestring.slice(0, 430)}
+                  {/* {romestring.slice(0, 350)}
+                   */}
+                  {rome}
                   <button
                     type="button"
                     className="btn btn-transparent"
                     style={{
                       position: "relative",
-                      left: 91,
-                      bottom: 2,
+                      // left: 91,
+                      // bottom: 2left:'auto',
+                      left: "auto",
+                      bottom: "auto",
                       color: "#53cd53",
                       fontWeight: "bold",
                     }}
+                    onClick={readmore2}
                   >
-                    Read More
+                    {/* Read More
+                     */}
+                    {name1}
                   </button>
                 </p>
               </div>
@@ -112,7 +198,8 @@ export default function Structure() {
               className="card "
               style={{
                 width: 352,
-                height: 620,
+                // height: 620,
+                height: "auto",
                 position: "relative",
                 top: 150,
               }}
@@ -128,19 +215,26 @@ export default function Structure() {
                   Best Of Paris In 7 Days Tour
                 </h5>
                 <p className="card-text">
-                  {parisstring.slice(0, 430)}
+                  {/* {parisstring.slice(0, 350)}
+                   */}
+                  {paris}
                   <button
                     type="button"
                     className="btn btn-transparent"
                     style={{
                       position: "relative",
-                      left: 117,
-                      bottom: -4,
+                      // left: 117,
+                      // bottom: -4,
+                      left: "auto",
+                      bottom: "auto",
                       color: "#53cd53",
                       fontWeight: "bold",
                     }}
+                    onClick={readmore3}
                   >
-                    Read More
+                    {/* Read More
+                     */}
+                    {name2}
                   </button>
                 </p>
               </div>
@@ -159,7 +253,8 @@ export default function Structure() {
               className="card my-4"
               style={{
                 width: 352,
-                height: 620,
+                // height: 620,
+                height: "auto",
                 position: "relative",
                 top: 150,
               }}
@@ -176,19 +271,25 @@ export default function Structure() {
                   Best Of Australia In 14 Days Tour
                 </h5>
                 <p className="card-text">
-                  {Australiastring.slice(0, 430)}
+                  {/* {Australiastring.slice(0, 350)}
+                   */}
+                  {Australia}
                   <button
                     type="button"
                     className="btn btn-transparent"
                     style={{
                       position: "relative",
-                      left: 84,
-                      bottom: -18,
+                      // left: 84,
+                      // bottom: -18,
+                      left: "auto",
+                      bottom: "auto",
                       color: "#53cd53",
                       fontWeight: "bold",
                     }}
+                    onClick={readmore4}
                   >
-                    Read More
+                    {/* Read More */}
+                    {name3}
                   </button>
                 </p>
               </div>
@@ -202,7 +303,8 @@ export default function Structure() {
               className="card my-4"
               style={{
                 width: 352,
-                height: 620,
+                // height: 620,
+                height: "auto",
                 position: "relative",
                 top: 150,
               }}
@@ -216,19 +318,24 @@ export default function Structure() {
               <div className="card-body">
                 <h5 className="card-title my-5"> Best Of Japan 14 Days Tour</h5>
                 <p className="card-text">
-                  {japanstring.slice(0, 430)}
+                  {/* {japanstring.slice(0, 350)} */}
+                  {japan}
                   <button
                     type="button"
                     className="btn btn-transparent"
                     style={{
                       position: "relative",
-                      left: 108,
-                      bottom: 18,
+                      // left: 108,
+                      // bottom: 18,
+                      left: "auto",
+                      bottom: "auto",
                       color: "#53cd53",
                       fontWeight: "bold",
                     }}
+                    onClick={readmore5}
                   >
-                    Read More
+                    {/* Read More */}
+                    {name4}
                   </button>
                 </p>
               </div>
@@ -242,7 +349,8 @@ export default function Structure() {
               className="card my-4"
               style={{
                 width: 352,
-                height: 620,
+                // height: 620,
+                height: "auto",
                 position: "relative",
                 top: 150,
               }}
@@ -259,19 +367,24 @@ export default function Structure() {
                   Best Of Russia In 7 Days Tour
                 </h5>
                 <p className="card-text">
-                  {russiastring.slice(0, 430)}
+                  {/* {russiastring.slice(0, 350)} */}
+                  {russia}
                   <button
                     type="button"
                     className="btn btn-transparent"
                     style={{
                       position: "relative",
-                      left: 117,
-                      bottom: -18,
+                      // left: 117,
+                      // bottom: -18,
+                      left: "auto",
+                      bottom: "auto",
                       color: "#53cd53",
                       fontWeight: "bold",
                     }}
+                    onClick={readmore6}
                   >
-                    Read More
+                    {/* Read More */}
+                    {name5}
                   </button>
                 </p>
               </div>

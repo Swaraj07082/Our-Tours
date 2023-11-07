@@ -1,16 +1,11 @@
-
-import './App.css';
-import Structure from './Components/Structure';
+import "./App.css";
+import Structure from "./Components/Structure";
 
 function App() {
   return (
-   <>
-   
-   
-   <Structure/>
-   
-   
-   </>
+    <>
+      <Structure />
+    </>
   );
 }
 
